@@ -296,7 +296,7 @@ part of make target.-->
     </phingcall> -->
     <!-- Register as custom Phing task -->
     <taskdef name="drush" classname="DrushTask"
-             classpath="${project.drupal.dir}/profiles/mz/drush/phing-drush" />
+             classpath="${project.drupal.dir}/profiles/mz/modules/drush/phingdrushtask" />
     <!-- Run drush from the project Drupal directory -->
     <property name="drush.root" value="${project.drupal.dir}"/>
   </target>
