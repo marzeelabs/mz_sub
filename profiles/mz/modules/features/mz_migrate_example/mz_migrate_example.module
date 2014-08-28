@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MZ Migrate Example feature.
+ */
+
+include_once 'mz_migrate_example.features.inc';

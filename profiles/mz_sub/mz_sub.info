@@ -1,0 +1,14 @@
+name = Marzee Labs Sub
+description = A Marzee Labs sub profile
+core = 7.x
+
+; Inherit MZ base profile
+; Needs a Drupal core patch (see foundation makefiles)
+; ====================================================
+
+base = mz
+
+; Extensions to mz
+dependencies[] = migrate
+dependencies[] = migrate_ui
+dependencies[] = mz_migrate_example

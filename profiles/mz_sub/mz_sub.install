@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implement hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * This contains a lot of soft configuration, i.e. things that should not go into features since they will
+ * likely be changed over the course of the project.
+ */
+function mz_sub_install() {
+  // Register all migrate handlers
+  migrate_static_registration();
+
+  // Migrate sample content
+  foreach (array('MZBrewery', 'MZTrappist') as $class) {
+    Migration::registerMigration(
+      $class . 'Migration',
+      $class
+    );
+
+    $migration = Migration::getInstance($class);
+    $migration->processImport();
+  }
+}
+
